@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top main-toolbar">
+      <div class="logo">
+        <img
+          src="https://amismisa.misacdn.net/apps/employee-self-service/assets/images/employee.svg"
+          alt="logo"
+        />
+        <div class="title">Nhân viên</div>
+      </div>
+      <div class="container-info">
+        <div class="icon-bell"></div>
+      </div>
+    </nav>
+    <div class="main-container">
+      <div class="sidebar-container">
+        <div class="sidebar big-sidebar">
+          <div class="sidebar-item-list">
+            <div
+              onClick="changeTab(event, 'main-content-1')"
+              class="sidebar-item sidebar-item-menu active"
+            >
+              <div class="item-content">
+                <div
+                  class="icon-main-sidebar-profile item-icon active-icon"
+                ></div>
+                <div class="icon-text">Hồ sơ</div>
+                <!---->
+              </div>
+            </div>
+            <div
+              onClick="changeTab(event, 'main-content-2')"
+              class="sidebar-item sidebar-item-menu"
+            >
+              <div class="item-content">
+                <div
+                  class="icon-main-sidebar-timesheet item-icon active-icon"
+                ></div>
+                <div class="icon-text">Chấm công</div>
+                <!---->
+              </div>
+            </div>
+            <div
+              onClick="changeTab(event, 'main-content-3')"
+              class="sidebar-item sidebar-item-menu"
+            >
+              <div class="item-content">
+                <div
+                  class="icon-main-sidebar-salary item-icon active-icon"
+                ></div>
+                <div class="icon-text">Tiền lương</div>
+                <!---->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content" id="main-content-1">
+        <div class="view-header pos-relative dis-align-items-center">
+          <div class="dis-flex view-header-content dis-align-items-center">
+            <div class="profile-info-header w-42">
+              <div class="header-user">
+                <div class="header-user-avatar avatar-50 pos-relative">
+                  <div class="avatar-50 text-overflow">
+                    <img class="avatar-50" src="./assets/img/Avatar.jpg" />
+                  </div>
+                </div>
+                <div>
+                  <div class="header-user-name text-overflow dis-flex">
+                    <div class="user-full-name text-overflow">
+                      <div class="user-name">Phạm Quang Hiếu</div>
+                      <div class="user-code">(B-0828)</div>
+                    </div>
+                  </div>
+                  <div class="more-infor m-l-16">
+                    <span>Lập trình viên</span
+                    ><!----><span class="dash-infor">-</span
+                    ><!----><span>Dự án EMIS LMS</span
+                    ><!---->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-container">
+            <button type="button" class="btn btn-primary">
+              Lấy lại dữ liệu
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            >
+              Cập nhật dữ liệu
+            </button>
+          </div>
+        </div>
+        <div class="group-box">
+          <div class="title">Thông tin cơ bản</div>
+          <div class="infomation">
+            <div class="row gx-5">
+              <div class="col right-side">
+                <div class="info-item row">
+                  <label class="col-sm" for="#">Mã nhân viên</label>
+                  <div class="content-info col-sm">B-0828</div>
+                </div>
+                <div class="info-item row">
+                  <label class="col-sm" for="#">Họ và đệm</label>
+                  <div class="content-info col-sm">Phạm Quang</div>
+                </div>
+                <div class="info-item row">
+                  <label class="col-sm" for="#">Tên</label>
+                  <div class="content-info col-sm">Hiếu</div>
+                </div>
+                <div class="info-item row">
+                  <label class="col-sm" for="#">Họ và tên</label>
+                  <div class="content-info col-sm">Phạm Quang Hiếu</div>
+                </div>
+                <div class="info-item row">
+                  <label class="col-sm" for="#">Giới tính</label>
+                  <div class="content-info col-sm">Nam</div>
+                </div>
+                <div class="info-item row">
+                  <label class="col-sm" for="#">Nơi sinh</label>
+                  <div class="content-info col-sm">-</div>
+                </div>
+                <div class="info-item row">
+                  <label class="col-sm" for="#">Nguyên quán</label>
+                  <div class="content-info col-sm">-</div>
+                </div>
+              </div>
+              <div class="col left-side">
+                <div class="info-item row">
+                  <label class="col-sm" for="#">Tình trạng hôn nhân</label>
+                  <div class="content-info col-sm">-</div>
+                </div>
+                <div class="info-item row">
+                  <label class="col-sm" for="#">MST cá nhân</label>
+                  <div class="content-info col-sm">-</div>
+                </div>
+                <div class="info-item row">
+                  <label class="col-sm" for="#">TP gia đình</label>
+                  <div class="content-info col-sm">-</div>
+                </div>
+                <div class="info-item row">
+                  <label class="col-sm" for="#">TP bản thân</label>
+                  <div class="content-info col-sm">-</div>
+                </div>
+                <div class="info-item row">
+                  <label class="col-sm" for="#">Dân tộc</label>
+                  <div class="content-info col-sm">-</div>
+                </div>
+                <div class="info-item row">
+                  <label class="col-sm" for="#">Tôn giáo</label>
+                  <div class="content-info col-sm">-</div>
+                </div>
+                <div class="info-item row">
+                  <label class="col-sm" for="#">Quốc tịch</label>
+                  <div class="content-info col-sm">Việt Nam</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-dialog-centered modal-lg"
+            role="document"
+          >
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Cập nhật dữ liệu
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <!-- Modal body -->
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter email"
+                    />
+                    <small id="emailHelp" class="form-text text-muted"
+                      >We'll never share your email with anyone else.</small
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1"
+                      >Check me out</label
+                    >
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main content 2 -->
+      <div class="main-content" id="main-content-2">
+        <div class="employee-container">
+          <div class="btn-wrapper">
+            <button type="button" class="btn btn-primary">
+              Thêm nhân viên
+            </button>
+            <button type="button" class="btn btn-primary">Xóa nhân viên</button>
+          </div>
+          <div class="table-container">
+            <div class="title">
+              Danh sách nhân viên
+            </div>
+            <div class="table-wrapper">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main content 3 -->
+      <div class="main-content" id="main-content-3"></div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</html>
